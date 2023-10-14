@@ -1,0 +1,30 @@
+<div class="col-md-10 col-md-offset-1">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Titulo</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+<tr *ngFor="let imagen of imagenes | async">
+    <td><img src="{{imagen.enlace_miniatura}}" width="200"/></td>
+    <td>{{imagen.nombre}}</td>
+    <td>
+        <a [routerLink]="['/imagenes/editar']" class="btn btn-info"> Editar</a>
+        <a [routerLink]="['/imagenes/borrar']" class="btn btn-danger">Borrar</a>
+    </td>
+</tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="col-md-10 col-md-offset-1">
+    <div>
+        <a [routerLink]="['/admin']" class="btn btn-default">Volver</a>
+        <a [routerLink]="['crear']" class="btn btn-success">Nueva Imagen</a>
+    </div>
+</div>
+
