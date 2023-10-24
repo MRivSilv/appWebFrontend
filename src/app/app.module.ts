@@ -18,6 +18,9 @@ import { AdminListaImagenesComponent } from './admin/admin-lista-imagenes/admin-
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { AdminCrearImagenComponent } from './admin/admin-crear-imagen/admin-crear-imagen.component';
+import { PopupComponent } from './popup/popup.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -34,13 +37,16 @@ import { AdminCrearImagenComponent } from './admin/admin-crear-imagen/admin-crea
     AdminComponent,
     AdminListaImagenesComponent,
     DashboardComponent,
-    AdminCrearImagenComponent
+    AdminCrearImagenComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [ImagenService],
   bootstrap: [AppComponent]

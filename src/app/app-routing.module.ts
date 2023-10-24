@@ -8,7 +8,7 @@ import { AdminComponent } from './admin/admin.component';
 import { adminRoutes } from './admin/admin.routes';
 import { FormsModule } from '@angular/forms';
 import { AdminCrearImagenComponent } from './admin/admin-crear-imagen/admin-crear-imagen.component';
-
+import { MatDialogModule } from '@angular/material/dialog';
 const appRoutes: Routes = [
   { path: '',redirectTo: '/galeria', pathMatch: 'full'},
   { path: 'galeria', component: GaleriaComponent},
@@ -19,7 +19,9 @@ const appRoutes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(appRoutes),
+  MatDialogModule],
+  exports: [RouterModule,
+  MatDialogModule]
 })
 export class AppRoutingModule { }

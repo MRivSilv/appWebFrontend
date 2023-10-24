@@ -1,0 +1,51 @@
+.navbar-color-fondo {
+    background-color: #702424; 
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.navbar-nav .nav-item {
+    text-align: center;
+}
+
+
+.navbar-nav .nav-item {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 14px; 
+}
+
+
+.navbar-nav .nav-item {
+    padding: 5px 10px; 
+}
+
+
+.navbar-centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-destacado {
+    background-color: rgb(243, 243, 148);
+}
+
+.navbar-test {
+    text-align: center;
+}
+
+.navbar-blanco {
+    color: white;
+}
