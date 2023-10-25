@@ -4,6 +4,7 @@ import { ImagenService } from '../servicios/imagen.service';
 import { Observable } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { DetalleImagenComponent } from './galeria/detalle-imagen/detalle-imagen.component';
+import { MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'ng-lista-imagenes',
   templateUrl: './lista-imagenes.component.html',
@@ -14,22 +15,25 @@ import { DetalleImagenComponent } from './galeria/detalle-imagen/detalle-imagen.
       padding: 10px; 
   }
   .imagen-nombre{
-    margin-bottom: 10px
+ 
+    margin-bottom: 10px;
+    max-width: 250px;
+    margin-left: 105px;
   }`
   ]
 })
 export class ListaImagenesComponent implements OnInit{
   imagenes!: Observable<Imagen[]>;
   selectedImagen!: Imagen;
+
   constructor(private imagenservice:ImagenService, public dialog:MatDialog){}
   ngOnInit(): void {
     this.imagenes = this.imagenservice.getImagenes();
   }
-  onSelect(imagen:Imagen){
-    this.selectedImagen = imagen;
-    const dialogRef = this.dialog.open(DetalleImagenComponent, {
-      width: '600px',
-      data: { selectedImagen: imagen }
+  onSelect(imagen:Imagen): void{
+    this.dialog.open(DetalleImagenComponent, {
+      width: '1000px',
+      data: {imagen: this.selectedImagen }
     });
   }
 }
