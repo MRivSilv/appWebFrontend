@@ -1,11 +1,19 @@
-<div class="container detalle-imagen">
+<div class="mat-dialog-container" *ngIf="selectedImagen">
     <div class="row">
         <div class="col-sm-8 col-xs-12">
+            <div class="cover-album">
             <img [src]="selectedImagen.enlace_grande" class="img-responsive">
         </div>
+        </div>
+        <div class="album-info">
         <div class="col-sm-8 col-xs-12">
-            <h1>{{selectedImagen.nombre | uppercase}}</h1>
-            <p>{{selectedImagen.descripcion}}</p>
+            <div class="nombre-album">
+                <h1>{{selectedImagen.nombre | uppercase}}</h1>
+            </div>
+            <div class="soundtrack-album">
+                <p>{{selectedImagen.descripcion}}</p>
+            </div>
+        </div>
         </div>
     </div>
 </div>

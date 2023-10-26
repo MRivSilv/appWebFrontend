@@ -32,8 +32,9 @@ export class ListaImagenesComponent implements OnInit{
   }
   onSelect(imagen:Imagen): void{
     this.dialog.open(DetalleImagenComponent, {
-      width: '1000px',
-      data: {imagen: this.selectedImagen }
+      data: {imagen: imagen},
+      maxWidth:1000
     });
+    
   }
 }

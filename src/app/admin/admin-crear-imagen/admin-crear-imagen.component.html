@@ -1,48 +1,43 @@
 <div class="col-md-10 col-md-offset-1">
-    <div>
-        <a [routerLink]="['/admin/']" class="btn btn-primary">Volver</a>
-    </div>
-</div>
-<div class="col-md-10 col-md-offset-1">
     <div class="well well bs-component">
         <form novalidate class="form-horizontal" (ngSubmit)="crearImagen(crearImagenForm.value)" #crearImagenForm="ngForm">
             <fieldset>
-                    <legend>Añadir nueva imagen</legend>
+                    <legend>Añadir nuevo album</legend>
                 <div class="form-group">
-                    <label for="miniatura" class="col-lg-2 control-label">Miniatura</label>
+                    <label for="miniatura" class="col-lg-2 control-label">Enlace de la miniatura del album</label>
                     <div class="col-lg-10">
                         <input type="text" class="form-control" id="miniatura" name="miniatura" 
-                        placeholder="Enlace de la imagen miniatura" ngModel #miniatura="ngModel" required minlength="7">
+                        placeholder="Porfavor, solo imagenes de 300x300" ngModel #miniatura="ngModel" required minlength="7">
                         <div *ngIf="miniatura.errors?.['required'] && miniatura.touched" class="alert alert-danger">
-                             La miniatura es obligatoria</div>
+                             La miniatura del album es obligatoria</div>
                         <div *ngIf="miniatura.errors?.['minlength'] && miniatura.touched" class="alert alert-danger">
                             URL demasiado corto, prueba con otro con al menos 7 caracteres</div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="enlace" class="col-lg-2 control-label">Enlace</label>
+                    <label for="enlace" class="col-lg-2 control-label">Enlace del cover en grande</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="enlace" name="enlace" placeholder="Enlace de la imagen" ngModel
+                        <input type="text" class="form-control" id="enlace" name="enlace" placeholder="Por lo menos 500x500 px" ngModel
                         #enlace="ngModel" required minlength="7">
                         <div *ngIf="enlace.errors?.['required'] && enlace.touched" class="alert alert-danger">
-                            El enlace es obligatorio</div>
+                            El cover en grande es obligatorio</div>
                         <div *ngIf="enlace.errors?.['minlength'] && enlace.touched" class="alert alert-danger">
                             URL demasiado corto, prueba con otro con almenos 7 caracteres</div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="nombre" class="col-lg-2 control-label">Nombre</label>
+                    <label for="nombre" class="col-lg-2 control-label">Nombre del album</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" ngModel
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del album" ngModel
                         #nombre="ngModel" required maxlength="30">
                         <div *ngIf="nombre.errors?.['required'] && nombre.touched" class="alert alert-danger">
                             Campo obligatorio</div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="descripcion" class="col-lg-2 control-label" >Descripción</label>
+                    <label for="descripcion" class="col-lg-2 control-label" >Soundtrack del almbum</label>
                     <div class="col-lg-10">
-                        <textarea class="form-control" id="descripcion" name="descripcion" placeholder="Descripción" ngModel
+                        <textarea class="form-control" id="descripcion" name="descripcion" placeholder="Soundtrack del album, porfavor una linea por track" ngModel
                         #descripcion="ngModel" required maxlength="250"></textarea>
                         <div *ngIf="descripcion.errors?.['required'] && descripcion.touched" class="alert alert-danger">
                             Campo obligatorio</div>
