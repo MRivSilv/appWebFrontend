@@ -9,12 +9,14 @@ import { adminRoutes } from './admin/admin.routes';
 import { FormsModule } from '@angular/forms';
 import { AdminCrearImagenComponent } from './admin/admin-crear-imagen/admin-crear-imagen.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ResultadosComponent } from './resultados/resultados.component';
 const appRoutes: Routes = [
   { path: '',redirectTo: '/galeria', pathMatch: 'full'},
   { path: 'galeria', component: GaleriaComponent},
   { path: 'contacto', component: ContactoComponent},
   { path: 'acercade', component: AcercadeComponent},
-  { path: 'admin', component: AdminComponent, children:adminRoutes}
+  { path: 'admin', component: AdminComponent, children:adminRoutes},
+  { path: 'search', component: ResultadosComponent },
 ];
 
 

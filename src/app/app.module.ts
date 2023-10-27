@@ -21,6 +21,7 @@ import { AdminCrearImagenComponent } from './admin/admin-crear-imagen/admin-crea
 import { PopupComponent } from './popup/popup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ResultadosComponent } from './resultados/resultados.component';
 
 
 
@@ -38,7 +39,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     AdminListaImagenesComponent,
     DashboardComponent,
     AdminCrearImagenComponent,
-    PopupComponent
+    PopupComponent,
+    ResultadosComponent
   ],
   imports: [
     BrowserModule,
