@@ -3,8 +3,8 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Imagen</th>
-                    <th>Titulo</th>
+                    <th>Cover</th>
+                    <th>Nombre del album</th>
                     <th>Acción</th>
                 </tr>
             </thead>
@@ -13,8 +13,8 @@
     <td><img src="{{imagen.enlace_miniatura}}" width="200"/></td>
     <td>{{imagen.nombre}}</td>
     <td>
-        <a [routerLink]="['/imagenes/editar']" class="btn btn-info"> Editar</a>
-        <a [routerLink]="['/imagenes/borrar']" class="btn btn-danger">Borrar</a>
+        <a [routerLink]="['editar', imagen.id]" class="btn btn-info"> Editar</a>
+        <a (click)="eliminarImagen(imagen.id)" class="btn btn-danger">Eliminar</a>
     </td>
 </tr>
             </tbody>

@@ -7,7 +7,7 @@ import { Observable, map } from 'rxjs'
   providedIn: 'root'
 })
 export class ImagenService {
-
+  private url = 'http://laravel.test/api/v1/imagenes'
   constructor(private http:HttpClient) { }
   getImagenes(): Observable<Imagen[]>{
     return this.http.get<Imagen[]>('http://laravel.test/api/v1/imagenes');
@@ -29,5 +29,10 @@ export class ImagenService {
       imagen.autor.toLowerCase().includes(keyword.toLowerCase())
     );
   }
+  deleteImagen(id: string) {
+    const url = `http://laravel.test/api/v1/imagenes/${id}`;
+    return this.http.delete(url);
+  }
+
 }
 

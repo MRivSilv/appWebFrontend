@@ -21,4 +21,6 @@ export class AdminCrearImagenComponent {
     error => console.log(<any>error)
     );
   }
+
 }
+

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PopupComponent } from './popup.component';
+import { BorrarComponent } from './borrar.component';
 
-describe('PopupComponent', () => {
-  let component: PopupComponent;
-  let fixture: ComponentFixture<PopupComponent>;
+describe('BorrarComponent', () => {
+  let component: BorrarComponent;
+  let fixture: ComponentFixture<BorrarComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PopupComponent]
+      declarations: [BorrarComponent]
     });
-    fixture = TestBed.createComponent(PopupComponent);
+    fixture = TestBed.createComponent(BorrarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

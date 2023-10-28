@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { AdminCrearImagenComponent } from './admin/admin-crear-imagen/admin-crear-imagen.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ResultadosComponent } from './resultados/resultados.component';
+
 const appRoutes: Routes = [
   { path: '',redirectTo: '/galeria', pathMatch: 'full'},
   { path: 'galeria', component: GaleriaComponent},

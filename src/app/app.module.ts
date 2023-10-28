@@ -18,11 +18,12 @@ import { AdminListaImagenesComponent } from './admin/admin-lista-imagenes/admin-
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { AdminCrearImagenComponent } from './admin/admin-crear-imagen/admin-crear-imagen.component';
-import { PopupComponent } from './popup/popup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ResultadosComponent } from './resultados/resultados.component';
-
+import { EditarComponent } from './admin/admin-lista-imagenes/editar/editar.component';
+import { BorrarComponent } from './admin/admin-lista-imagenes/borrar/borrar.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -39,8 +40,9 @@ import { ResultadosComponent } from './resultados/resultados.component';
     AdminListaImagenesComponent,
     DashboardComponent,
     AdminCrearImagenComponent,
-    PopupComponent,
-    ResultadosComponent
+    ResultadosComponent,
+    EditarComponent,
+    BorrarComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,8 @@ import { ResultadosComponent } from './resultados/resultados.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [ImagenService],
   bootstrap: [AppComponent]
