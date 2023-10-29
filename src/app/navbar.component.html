@@ -1,40 +1,25 @@
-<nav class="navbar navbar-expand-lg navbar-color-fondo">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="https://th.bing.com/th/id/OIG.vn6e64IQrNwVSkOaQVXp?pid=ImgGn" alt="Logo" width="80" height="80">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" routerLinkActive="active" aria-current="page" href="#inicio">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" routerLinkActive="active" aria-current="page" [routerLink]="['/contacto']">Contacto</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" routerLinkActive="active" aria-current="page" [routerLink]="['/acercade']">Acerca De</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Menu
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Accion 1</a></li>
-            <li><a class="dropdown-item" href="#">Accion 2</a></li>
-            <li><a class="dropdown-item" href="#">Accion 3</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Accion 4</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form (ngSubmit)="buscar()" #searchForm="ngForm">
-        <input type="text" name="keyword" [(ngModel)]="keyword" placeholder="Buscar...">
-        <button type="submit">Buscar</button>
-      </form>
+<!DOCTYPE html>
+  <nav class="navbar navbar-expand-lg navbar-color-fondo">
+    <div class="container">
+      <a class="navbar-brand" href="galeria">
+        <img src="https://cdn.discordapp.com/attachments/1133974128169320500/1167625535766155365/Logo-Explora-Music.png?ex=654ecf05&is=653c5a05&hm=7d381efdd6eb36518be0005957492f6b6fbdba579b4dd040cf41fbc1a5e9cefc&" alt="Logo" width="80" height="80">
+      </a>
+      <div class="collapse navbar-collapse navbar" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" routerLinkActive="active" aria-current="page" href="galeria">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLinkActive="active" aria-current="page" [routerLink]="['/contacto']">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLinkActive="active" aria-current="page" [routerLink]="['/acercade']">Acerca De</a>
+          </li>
+        </ul>
+        <form (ngSubmit)="buscar()" #searchForm="ngForm">
+          <input type="text" name="keyword" [(ngModel)]="keyword" placeholder="Buscar...">
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>

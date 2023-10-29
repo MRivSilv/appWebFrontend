@@ -1,51 +1,63 @@
+/* Estilo para la barra de navegaciÃ³n */
 .navbar-color-fondo {
-    background-color: #702424; 
-}
-
-.navbar-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
-
-.navbar-nav .nav-item {
+    background-color: #3498db; 
+  }
+  
+  .navbar-nav .nav-link {
+    background-color: #fff;
+    color: #3498db;
+    border: 2px solid #3498db;
+    padding: 10px 20px;
+    border-radius: 10px;
     text-align: center;
-}
-
-
-.navbar-nav .nav-item {
-    background-color: rgb(255, 255, 255);
-    padding: 10px 15px;
+    margin-right: 10px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    text-decoration: none;
+  }
+  
+  .navbar-nav form input[type="text"] {
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    padding: 10px; 
+  }
+  .navbar-nav form button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .navbar-brand img {
+    border-radius: 50%;
+  }
+  
+  form {
+    display: flex;
+    align-items: center;
+  }
+  
+  input[type="text"] {
+    background-color: #f8f9fa;
+    border: none;
+    padding: 5px;
     border-radius: 5px;
     margin-right: 10px;
-}
-
-
-.navbar-nav .nav-item .nav-link {
-    font-size: 14px; 
-}
-
-
-.navbar-nav .nav-item {
-    padding: 5px 10px; 
-}
-
-
-.navbar-centrar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navbar-destacado {
-    background-color: rgb(243, 243, 148);
-}
-
-.navbar-test {
-    text-align: center;
-}
-
-.navbar-blanco {
-    color: white;
-}
+  }
+  
+  button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #102e42;
+    color: #ffffff;
+  }
